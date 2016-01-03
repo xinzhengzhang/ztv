@@ -1,0 +1,36 @@
+<App Theme="Basic">
+	<DockPanel>
+		<StatusBarBackground Dock="Top" />
+	    <BottomFrameBackground Dock="Bottom" />
+	    <JavaScript File="MainViewController.js"/>
+	    <StackPanel Dock="Top">
+	    	<Text FontSize="28" Alignment="VerticalCenter"
+	                TextAlignment="Center" Padding="2" 
+	                Value="NEWSbsss" />
+	        <Rectangle Height="1" Margin="0,3,0,0" Fill="#333c48" />
+	    </StackPanel>
+
+	    <Text ux:Class="Header" Margin="10,10,10,5" TextWrapping="Wrap" FontSize="22" />
+        <Text ux:Class="Article" Margin="10,0,10,0" TextWrapping="Wrap" FontSize="13" />
+        <Text ux:Class="PublishedDate" Margin="10,0,10,0" FontSize="13" TextColor="#999" />
+
+	    <ScrollView>
+	    	<StackPanel Alignment="Top">
+	    		<Panel Height="5" />
+	    		<Each Items="{searches.result.video}">
+	    			<Panel>
+		    			<Text Value="{title}" />
+		    			<Clicked Handler="{togglePlayerPresented}">
+		    				<NavigateTo Target="playerPage" />
+		    			</Clicked>
+		    		</Panel>
+	    		</Each>
+	    	</StackPanel>
+	    </ScrollView>
+	    <Page ux:Name="playerPage">
+     		<PlayerPage />
+   		</Page>
+	</DockPanel>
+	
+</App>
+
