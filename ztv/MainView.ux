@@ -21,15 +21,15 @@
 	    			<Panel>
 		    			<Text Value="{title}" />
 		    			<Clicked Handler="{togglePlayerPresented}">
-		    				<NavigateTo Target="playerPage" />
+		    				<!-- <NavigateTo Target="playerPage" /> -->
 		    			</Clicked>
 		    		</Panel>
 	    		</Each>
 	    	</StackPanel>
 	    </ScrollView>
-	    <Page ux:Name="playerPage">
+	    <!-- <Page ux:Name="playerPage">
      		<PlayerPage />
-   		</Page>
+   		</Page> -->
 	</DockPanel>
 	
 </App>
